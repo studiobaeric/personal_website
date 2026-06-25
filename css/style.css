@@ -4,11 +4,27 @@
 
 body {
   font-family: system-ui, sans-serif;
-  background: #FE7743;
+  background: antiquewhite;
+  cursor: url("../assets/pencil.png") 0 100, auto;
+}
+
+#trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.footer_card {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
 }
 
 .top {
-  height: 50vh;
+  height: 44vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +32,7 @@ body {
 }
 
 .bottom {
-  padding-top: 100px;
+  padding-top: 200px;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -39,10 +55,9 @@ body {
   padding: 10px 30px 20px 50px; /* left space for spiral */
   border-radius: 6px;
 
-  box-shadow:
-    inset 35px 0 0 rgba(255, 0, 0, 0.15),
-    inset 0 0 0 1px rgba(0, 0, 0, 0.1),
-    0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 35px 0 0 rgba(255, 0, 0, 0.2),
+  inset 0 0 0 1px rgba(0, 0, 0, 0.1),
+  0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .info_card:hover {
@@ -70,12 +85,22 @@ body {
   pointer-events: none;
 }
 
+.info_name {
+  text-align: center; /* centers the text inside */
+  padding-bottom: 10px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
 .line {
   position: relative;
   height: 28px;
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 20px;
+  font-family: 'Patrick Hand', cursive;
+  color: rgb(0, 0, 0, 0.7);
 }
 
 /* draw the actual ruled line */
@@ -91,10 +116,11 @@ body {
 }
 
 .timeline {
-  display: flex;              /* THIS makes it horizontal */
-  gap: 80px;                  /* space between items */
+  display: flex; /* THIS makes it horizontal */
+  gap: 100px; /* space between items */
   align-items: center;
   position: relative;
+  transform: translateX(-48px);
 }
 
 .timeline::before {
@@ -102,20 +128,35 @@ body {
   position: absolute;
   top: 50%;
   left: 0;
-  right: 0;
+  right: -90px;
   height: 3px;
-  background: white;
+  background: dimgray;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  right: -100px;   /* adjust distance from end */
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 0;
+  height: 0;
+
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid dimgray; /* arrow color */
 }
 
 .item {
   position: relative;
   margin: 60px 0;
-  transition: transform 0.3s ease;
+  transition: transform 0.1s ease;
 }
 
 .item:hover {
   transform: scale(1.05);
- }
+}
 
 .dot {
   position: absolute;
@@ -123,14 +164,14 @@ body {
   left: 0;
   width: 16px;
   height: 16px;
-  background: white;
+  background: dimgray;
   border-radius: 50%;
   transform: translate(-50%, -50%); /* centers it on node origin */
 }
 
 .label {
   position: absolute;
-  top: 0;
+  top: -5px;
   left: 0;
 
   transform-origin: 0 0;
@@ -138,8 +179,19 @@ body {
 
   white-space: nowrap;
   font-size: 20px;
-  color: black;
-  background: #D7D7D7;
+  color: #222;
+
+  background: #f4f1e8;
+
+  padding: 6px 12px;
+
+
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15),
+  inset 0 0 2px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 2px;
 }
 
 .node {
