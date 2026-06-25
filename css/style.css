@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  /* dark modern gradient */
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #2a0a3d 40%,
+    #0b1b4a 100%
+  );
+
+  color: white; /* optional, but usually needed */
+  font-family: system-ui, sans-serif;
+}
+
+.top {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.bottom {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info_card {
+  width: 300px;
+  height: 100px;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+.timeline {
+  display: flex;              /* THIS makes it horizontal */
+  gap: 80px;                  /* space between items */
+  align-items: center;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: white;
+}
+.item {
+  position: relative;
+  margin: 60px 0;
+}
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%); /* centers it on node origin */
+}
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform-origin: 0 0;
+  transform: rotate(-45deg) translate(20px, -16px);
+
+  white-space: nowrap;
+  font-size: 20px;
+  color: white;
+}
+.node {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
