@@ -1,17 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  min-height: 100vh;
-
-  /* dark modern gradient */
-  background: linear-gradient(
-    135deg,
-    #000000 0%,
-    #2a0a3d 40%,
-    #0b1b4a 100%
-  );
-
-  color: white; /* optional, but usually needed */
   font-family: system-ui, sans-serif;
+  background: #FE7743;
 }
 
 .top {
@@ -21,24 +14,89 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .bottom {
+  padding-top: 100px;
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .info_card {
   width: 300px;
-  height: 100px;
-  border: 2px solid black;
-  margin: 0 auto;
+  height: 300px;
+  position: relative;
+
+  background: #fffefc;
+
+  display: flex;
+  flex-direction: column;
+
+  /* spacing between notebook lines */
+
+
+  padding: 10px 30px 20px 50px; /* left space for spiral */
+  border-radius: 6px;
+
+  box-shadow:
+    inset 35px 0 0 rgba(255, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.1),
+    0 10px 25px rgba(0, 0, 0, 0.2);
 }
+
+.info_card:hover {
+  transform: scale(1.05);
+}
+
+.info_card::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  width: 20px;
+
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.7) 3px,
+    transparent 4px
+  );
+
+  background-size: 20px 28px; /* vertical spacing between holes */
+  background-repeat: repeat-y;
+
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.line {
+  position: relative;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+/* draw the actual ruled line */
+.line::after {
+  content: "";
+  position: absolute;
+  left: -50px; /* extends under margin area */
+  right: -30px;
+  bottom: 0;
+
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .timeline {
   display: flex;              /* THIS makes it horizontal */
   gap: 80px;                  /* space between items */
   align-items: center;
   position: relative;
 }
+
 .timeline::before {
   content: "";
   position: absolute;
@@ -48,10 +106,17 @@ body {
   height: 3px;
   background: white;
 }
+
 .item {
   position: relative;
   margin: 60px 0;
+  transition: transform 0.3s ease;
 }
+
+.item:hover {
+  transform: scale(1.05);
+ }
+
 .dot {
   position: absolute;
   top: 0;
@@ -62,6 +127,7 @@ body {
   border-radius: 50%;
   transform: translate(-50%, -50%); /* centers it on node origin */
 }
+
 .label {
   position: absolute;
   top: 0;
@@ -72,8 +138,10 @@ body {
 
   white-space: nowrap;
   font-size: 20px;
-  color: white;
+  color: black;
+  background: #D7D7D7;
 }
+
 .node {
   position: relative;
   width: 0;
