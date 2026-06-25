@@ -12,7 +12,7 @@ jobs:
         uses: burnett01/rsync-deployments@v9
         with:
           switches: -avzr --delete
-          path: src/
+          path: .
           remote_path: ${{ secrets.PATH }} # ex: /var/www/html/
           remote_host: ${{ secrets.HOST }} # ex: example.com
           remote_user: ${{ secrets.USERNAME }} # ex: ubuntu
