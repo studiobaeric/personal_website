@@ -13,7 +13,7 @@ jobs:
         with:
           switches: -avzr --delete
           path: src/
-          remote_path: ${{ secrets.REMOTE_PATH }} # ex: /var/www/html/
+          remote_path: ~/htdocs/ # ex: /var/www/html/
           remote_host: ${{ secrets.HOST }} # ex: example.com
           remote_user: ${{ secrets.USERNAME }} # ex: ubuntu
           remote_key: ${{ secrets.SSH_KEY }}
