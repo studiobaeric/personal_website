@@ -104,6 +104,16 @@ document.getElementById("label_micromobility").addEventListener("click", () => {
   info_card_lines[3].textContent = "Rohdaten-Verarbeitung von Verkehrsdaten"
 })
 
+document.getElementById("label_website").addEventListener("click", () => {
+  reset_info_card();
+
+  info_card_lines[0].textContent = "Website-Entwicklung 2026";
+  info_card_lines[1].textContent = "Entwurf und Entwicklung eigener Website";
+  info_card_lines[2].textContent = "Cardboard Prototyping";
+  info_card_lines[3].textContent = "Plain HTML, CSS & JS";
+  info_card_lines[4].textContent = "CI/CD mit Github Workflow";
+})
+
 document.getElementById("label_bachelor").addEventListener("click", () => {
   reset_info_card();
 
