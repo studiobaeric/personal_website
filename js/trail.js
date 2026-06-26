@@ -47,4 +47,16 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  lastPoints = []; // important: reset old coordinates
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
 draw();
+
+
