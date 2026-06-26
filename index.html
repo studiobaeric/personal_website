@@ -27,46 +27,37 @@
 <canvas id="trail"></canvas>
 <div class="top">
   <div class="top_left">
-    <div class="post-it">
+    <button class="post-it">
       <span class="pin"></span>
       Geo-Hochzeit
-    </div>
+    </button>
   </div>
   <div class="top_middle">
-    <div class="info_card">
+    <div class="info_card" id="infoCard">
       <div class="line">
-        <div class="info_name">Eric Sodemann</div>
       </div>
       <div class="line">
-        +49 163/*******
       </div>
       <div class="line">
-        eri*****03@gmail.com
       </div>
       <div class="line">
-
       </div>
       <div class="line">
-
       </div>
       <div class="line">
-
       </div>
       <div class="line">
-
       </div>
       <div class="line">
-
       </div>
       <div class="line">
-
       </div>
     </div>
   </div>
   <div class="top_right">
     <div class="post-it">
       <span class="pin"></span>
-
+      Event-Planer
     </div>
   </div>
 </div>
@@ -76,46 +67,58 @@
     <div class="item">
       <div class="node">
         <div class="dot"></div>
-        <div class="label">2022 Abitur 1,9</div>
+        <button class="label" id="label_abitur">2022 Abitur 1,9</button>
       </div>
     </div>
     <div class="item">
       <div class="node">
         <div class="dot"></div>
-        <div class="label">2022 Informatik TU-Darmstadt</div>
+        <button class="label" id="label_tudarmstadt">2022 Informatik TU-Darmstadt</button>
       </div>
     </div>
     <div class="item">
       <div class="node">
         <div class="dot"></div>
-        <div class="label">2024 Serious-Games</div>
+        <button class="label" id="label_mentoring">2023 Mentoring</button>
       </div>
     </div>
     <div class="item">
       <div class="node">
         <div class="dot"></div>
-        <div class="label">2024 Wrong-Way-Driving Detection</div>
+        <button class="label" id="label_seriousgames">2024 Serious-Games</button>
       </div>
     </div>
     <div class="item">
       <div class="node">
         <div class="dot"></div>
-        <div class="label">2025 Micromobility</div>
+        <button class="label" id="label_wwdc">2024 Wrong-Way-Driving Detection</button>
       </div>
     </div>
     <div class="item">
       <div class="node">
         <div class="dot"></div>
-        <div class="label">~2027 Abschluss Bachelor</div>
+        <button class="label" id="label_micromobility">2025 Micromobility</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="node">
+        <div class="dot"></div>
+        <button class="label" id="label_bachelor">~2027 Abschluss Bachelor</button>
       </div>
     </div>
   </div>
 </div>
 
+<svg width="0" height="0">
+  <filter id="roughen">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5"/>
+  </filter>
+</svg>
 
-<!-- <script src="./js/trail.js"></script> -->
-
+<script src="./js/trail.js"></script>
 <script src="./js/post-it.js"></script>
+<script src="./js/timeline.js"></script>
 </body>
 
 
