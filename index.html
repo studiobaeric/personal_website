@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eric Sodemann</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/timeline.css">
+  <link rel="stylesheet" href="./css/post-it.css">
+  <link rel="stylesheet" href="./css/info-card.css">
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -25,106 +28,81 @@
 
 <body>
 <canvas id="trail"></canvas>
-<div class="top">
-  <div class="top_left">
-    <button class="post-it">
-      <span class="pin"></span>
-      Geo-Hochzeit
-    </button>
-  </div>
-  <div class="top_middle">
-    <div class="info_card" id="infoCard">
-      <div class="line">
-      </div>
-      <div class="line">
-      </div>
-      <div class="line">
-      </div>
-      <div class="line">
-      </div>
-      <div class="line">
-      </div>
-      <div class="line">
-      </div>
-      <div class="line">
-      </div>
-      <div class="line">
-      </div>
-      <div class="line">
-      </div>
-    </div>
-  </div>
-  <div class="top_right">
-    <div class="post-it">
-      <span class="pin"></span>
-      Event-Planer
-    </div>
-  </div>
+
+<div id="info-card-container"></div>
+
+<div class="post-it">
+  <span class="pin"></span>
+  Event-Planer
 </div>
+<button class="post-it" id="geohochzeit">
+  <span class="pin"></span>
+  Geo-Hochzeit
+</button>
 
-<div class="bottom">
-  <div class="timeline">
-    <div class="item">
-      <div class="node">
-        <div class="timeline_dot"></div>
-        <button class="label" id="label_abitur">
-          <span class="label_dot"></span>
-          2022 Abitur 1,9
-        </button>
+<div class="timeline">
+  <div class="item">
+    <div class="node">
+      <div class="timeline_dot"></div>
+      <button class="label" id="label_abitur">
+        <span class="label_dot"></span>
+        2022 Abitur 1,9
+      </button>
 
-      </div>
     </div>
-    <div class="item">
-      <div class="node">
-        <div class="timeline_dot"></div>
-        <button class="label" id="label_tudarmstadt"><span class="label_dot"></span>2022 Informatik TU-Darmstadt
-        </button>
-      </div>
+  </div>
+  <div class="item">
+    <div class="node">
+      <div class="timeline_dot"></div>
+      <button class="label" id="label_tudarmstadt"><span class="label_dot"></span>2022 Informatik TU-Darmstadt
+      </button>
     </div>
-    <div class="item">
-      <div class="node">
-        <div class="timeline_dot"></div>
-        <button class="label" id="label_mentoring"><span class="label_dot"></span>2023 Mentoring</button>
-      </div>
+  </div>
+  <div class="item">
+    <div class="node">
+      <div class="timeline_dot"></div>
+      <button class="label" id="label_mentoring"><span class="label_dot"></span>2023 Mentoring</button>
     </div>
-    <div class="item">
-      <div class="node">
-        <div class="timeline_dot"></div>
-        <button class="label" id="label_seriousgames"><span class="label_dot"></span>2024 Serious-Games</button>
-      </div>
+  </div>
+  <div class="item">
+    <div class="node">
+      <div class="timeline_dot"></div>
+      <button class="label" id="label_seriousgames"><span class="label_dot"></span>2024 Serious-Games</button>
     </div>
-    <div class="item">
-      <div class="node">
-        <div class="timeline_dot"></div>
-        <button class="label" id="label_wwdc"><span class="label_dot"></span>2024 Wrong-Way-Driving Detection</button>
-      </div>
+  </div>
+  <div class="item">
+    <div class="node">
+      <div class="timeline_dot"></div>
+      <button class="label" id="label_wwdd"><span class="label_dot"></span>2024 Wrong-Way-Driving Detection</button>
     </div>
-    <div class="item">
-      <div class="node">
-        <div class="timeline_dot"></div>
-        <button class="label" id="label_micromobility"><span class="label_dot"></span>2025 Micromobility</button>
-      </div>
+  </div>
+  <div class="item">
+    <div class="node">
+      <div class="timeline_dot"></div>
+      <button class="label" id="label_micromobility"><span class="label_dot"></span>2025 Micromobility</button>
     </div>
-    <div class="item">
-      <div class="node">
-        <div class="timeline_dot"></div>
-        <button class="label" id="label_website"><span class="label_dot"></span>2026 Website-Entwicklung</button>
-      </div>
+  </div>
+  <div class="item">
+    <div class="node">
+      <div class="timeline_dot"></div>
+      <button class="label" id="label_website"><span class="label_dot"></span>2026 Website-Entwicklung</button>
     </div>
-    <div class="item">
-      <div class="node">
-        <div class="timeline_dot"></div>
-        <button class="label" id="label_bachelor"><span class="label_dot"></span>~2027 Abschluss Bachelor</button>
-      </div>
+  </div>
+  <div class="item">
+    <div class="node">
+      <div class="timeline_dot"></div>
+      <button class="label" id="label_bachelor"><span class="label_dot"></span>~2027 Abschluss Bachelor</button>
     </div>
   </div>
 </div>
 
 <svg id="connectorLayer"></svg>
 
+<script src="./js/info-card.js" type="module"></script>
+<script src="./js/index.js" type="module"></script>
 <script src="./js/trail.js"></script>
 <script src="./js/post-it.js"></script>
-<script src="./js/timeline.js"></script>
+<script src="./js/timeline.js" type="module"></script>
 <script src="./js/timeline_strings.js"></script>
 </body>
 
