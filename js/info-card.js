@@ -1,9 +1,3 @@
-const infoCardLoaded = fetch("../components/info-card.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("info-card-container").innerHTML = html;
-  });
-
 function init_line_format() {
   info_card_lines[0].style.fontWeight = "bold";
   info_card_lines[0].style.fontSize = "25px";
@@ -27,7 +21,7 @@ function reset_info_card() {
   init_line_format()
 }
 
-export function set_state(state) {
+export function set_info_card_state(state) {
   switch (state) {
     case "personal_information":
       load_personal_information();
@@ -157,11 +151,15 @@ function load_bachelor_summary() {
   info_card_lines[0].textContent = "vsl. Bachelor Informatik 2027";
 }
 
-await infoCardLoaded;
+await fetch("../components/info-card.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("info-card-container").innerHTML = html;
+  });
 
 const info_card = document.getElementById("infoCard");
 const info_card_lines = info_card.children;
 
 clear_info_card();
 init_line_format();
-set_state("personal_information");
+set_info_card_state("personal_information");
