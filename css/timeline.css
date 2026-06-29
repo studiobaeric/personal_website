@@ -1,6 +1,6 @@
 .timeline {
   display: flex;
-  gap: 100px;
+  gap: clamp(55px, 8vw, 100px);
   align-items: center;
 
   position: fixed;

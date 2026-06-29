@@ -4,6 +4,7 @@
 
 html, body {
   font-family: system-ui, sans-serif;
+  margin: 0;
   background: antiquewhite;
   cursor: url("../assets/pencil.png") 0 100, auto;
   height: 100%;
@@ -11,16 +12,9 @@ html, body {
   overflow: hidden;
 }
 
-.post-it,
-.timeline,
-#trail,
-#connectorLayer {
+.hidden {
   transition: opacity 0.3s ease;
-}
-
-body.card-focused .post-it,
-body.card-focused #connectorLayer,
-body.card-focused .timeline {
+  background: antiquewhite;
   opacity: 0;
   pointer-events: none;
 }

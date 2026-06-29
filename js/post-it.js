@@ -1,3 +1,5 @@
+import {show_view} from "./index.js";
+
 const postItColors = ['#fe8e45', '#f86398', '#58d3d6', '#f8838a']
 
 function setCardFocusedMode() {
@@ -13,6 +15,5 @@ function setPostItColors() {
 setPostItColors();
 
 document.getElementById("geohochzeit").addEventListener("click", () => {
-  setCardFocusedMode();
-
+  show_view("geo-hochzeit");
 });
