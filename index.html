@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/timeline.css">
   <link rel="stylesheet" href="./css/post-it.css">
   <link rel="stylesheet" href="./css/info-card.css">
+  <link rel="stylesheet" href="./css/film-strip.css">
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -35,7 +36,7 @@
 </div>
 
 <!-- TIMELINE VIEW -->
-<div class="TIMELINE-VIEW">
+<div id="TIMELINE-VIEW">
   <div class="post-it">
     <span class="pin"></span>
     Event-Planer
@@ -48,22 +49,18 @@
   <svg id="connectorLayer"></svg>
 </div>
 
+<!-- GEO-HOCHZEIT VIEW -->
+<div id="GEO-HOCHZEIT-VIEW" class="hidden">
+  <div id="film-strip-container"></div>
+</div>
+
 <script src="./js/info-card.js" type="module"></script>
+<script src="./js/film-strip.js" type="module"></script>
 <script src="./js/index.js" type="module"></script>
 <script src="./js/trail.js"></script>
-<script src="./js/post-it.js"></script>
+<script src="./js/post-it.js" type="module"></script>
 <script src="./js/timeline.js" type="module"></script>
 <script src="./js/timeline_strings.js"></script>
 </body>
-
-
-<footer>
-  <div class="footer_card">
-    <button class="impressum">
-      Impressum
-    </button>
-  </div>
-</footer>
-
 
 </html>

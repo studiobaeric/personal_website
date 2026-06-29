@@ -15,8 +15,8 @@ function getDotCenter(label) {
   const rect = dot.getBoundingClientRect();
 
   return {
-    x: (rect.left + rect.width / 2 + window.scrollX) + (Math.floor(Math.random() * (rect.width/2)) * Math.random() < 0.5 ? 1 : -1),
-    y: (rect.top + rect.height / 2 + window.scrollY) + (Math.floor(Math.random() * (rect.width/2)) * Math.random() < 0.5 ? 1 : -1)
+    x: (rect.left + rect.width / 2 + window.scrollX) + (Math.floor(Math.random() * (rect.width / 2)) * Math.random() < 0.5 ? 1 : -1),
+    y: (rect.top + rect.height / 2 + window.scrollY) + (Math.floor(Math.random() * (rect.width / 2)) * Math.random() < 0.5 ? 1 : -1)
   };
 }
 
@@ -43,9 +43,15 @@ function drawPath(from, to) {
 }
 
 function renderConnections() {
-  svg.innerHTML = "";
 
   const items = document.querySelectorAll(".item");
+
+  if (items.length === 0) {
+    console.error("Red Strings tried to render before items exist.");
+    return;
+  }
+
+  svg.innerHTML = "";
 
   items.forEach(item => {
     const dot = item.querySelector(".timeline_dot");
@@ -72,6 +78,10 @@ function renderConnections() {
 }
 
 // redraw on load + resize
-window.addEventListener("load", renderConnections);
+window.addEventListener("load", () => {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(renderConnections);
+  });
+});
 window.addEventListener("resize", renderConnections);
 window.addEventListener("scroll", renderConnections);
