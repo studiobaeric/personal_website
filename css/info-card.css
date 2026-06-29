@@ -1,4 +1,7 @@
 .info_card {
+  --scale: 1;
+  --translate: calc(50vw - 200px),20px;
+
   width: 400px;
   min-width: 400px;
   height: 300px;
@@ -7,7 +10,7 @@
 
   top: 0;
   left: 0;
-  transform: translate(calc(50vw - 200px), 20px);
+  transform: translate(var(--translate)) scale(var(--scale));
 
   background: #fffefc;
 
@@ -26,14 +29,9 @@
     transform 0.3s ease;
 }
 
-.hidden .info_card {
-  position: fixed;
-  transform: translate(0, 0);
-  transition: transform 1s ease;
-}
-
 .info_card:hover {
-  transform: translate(calc(50vw - 200px), 20px) scale(1.05);
+  --scale: 1.05;
+  transform-origin: center;
   transition: transform 0.3s;
 }
 

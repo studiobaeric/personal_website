@@ -6,6 +6,7 @@ const geo_hochzeit_view = document.getElementById("GEO-HOCHZEIT-VIEW");
 document.addEventListener("click", (e) => {
   if (!e.target.closest("button")) {
     set_info_card_state("personal_information");
+    document.getElementById("image-container").replaceChildren();
   }
 });
 
@@ -20,6 +21,7 @@ export function show_view(view) {
       timeline_view.classList.add("hidden");
       document.getElementById("infoCard").style.transition = "transform 1s ease";
       document.getElementById("infoCard").style.transform = "translate(0, 0)";
+      document.getElementById("infoCard").style.margin = "8px 8px";
       break;
   }
 }

@@ -10,6 +10,8 @@
   transform: translateX(calc(-50% - 80px));
 
   padding: 20px 0;
+
+  z-index: 900;
 }
 
 .timeline::before {
@@ -120,11 +122,17 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0;
+  z-index: 901;
 }
 
 .item {
   position: relative;
   z-index: 1;
+}
+
+.image-container {
+  position: fixed;
+  right: 140px;
+  top: 100px;
 }
 
