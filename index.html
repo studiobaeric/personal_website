@@ -37,11 +37,12 @@
 
 <!-- TIMELINE VIEW -->
 <div id="TIMELINE-VIEW">
-  <button class="post-it">
+  <button class="post-it" id="website-design-button">
     <span class="pin"></span>
-    Event-Planer
+    Website Prototyping
+    <img class="post-it-icon" src="./assets/web-design-brush-icon.svg" alt="" width="48" height="48">
   </button>
-  <button class="post-it" id="geohochzeit">
+  <button class="post-it" id="geohochzeit-button">
     <span class="pin"></span>
     Geo-Hochzeit
     <img class="post-it-icon" src="./assets/geo-hochzeit.png" alt="" width="48" height="48">
@@ -53,7 +54,11 @@
 
 <!-- GEO-HOCHZEIT VIEW -->
 <div id="GEO-HOCHZEIT-VIEW" class="hidden">
-  <div id="film-strip-container"></div>
+  <div class="film-strip-container"></div>
+</div>
+
+<!-- WEBSITE-DESIGN VIEW -->
+<div id="WEBSITE-DESIGN-VIEW" class="hidden">
 </div>
 
 <script src="./js/info-card.js" type="module"></script>

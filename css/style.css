@@ -18,6 +18,10 @@ html, body {
   pointer-events: none;
 }
 
+.info_card.no-hover:hover {
+  --scale: 1;
+}
+
 #trail {
   position: fixed;
   top: 0;
@@ -32,4 +36,12 @@ html, body {
   position: absolute;
   right: 5px;
   bottom: 5px;
+}
+
+#GEO-HOCHZEIT-VIEW {
+  transition: opacity 0.3s ease;
+}
+
+#TIMELINE-VIEW {
+  transition: opacity 0.3s ease;
 }

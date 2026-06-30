@@ -1,5 +1,6 @@
 await fetch("../components/film-strip.html")
   .then(res => res.text())
   .then(html => {
-    document.getElementById("film-strip-container").innerHTML = html;
+    document.querySelectorAll(".film-strip-container").forEach(x => x.innerHTML = html);
   });
+

@@ -4,6 +4,7 @@
   rotate: 5deg;
   position: absolute;
   right: 5vw;
+  transition: opacity 0.3s ease;
 }
 
 /* The film */

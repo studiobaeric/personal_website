@@ -52,8 +52,18 @@ document.getElementById("label_micromobility").addEventListener("click", () => {
 })
 
 document.getElementById("label_website").addEventListener("click", () => {
-  reset_image_container();
   set_info_card_state("website_summary");
+
+  const img = document.createElement("img");
+  img.src = "./assets/website.jpg";
+  img.alt = "Website Prototype";
+  img.style.width = "250px";
+  img.style.height = "auto";
+  img.style.rotate = "1deg"
+  img.style.boxShadow = "0 0 20px rgba(0, 0, 0, 0.35)";
+  img.style.translate= "0 -40px";
+
+  image_container.replaceChildren(img);
 })
 
 document.getElementById("label_bachelor").addEventListener("click", () => {

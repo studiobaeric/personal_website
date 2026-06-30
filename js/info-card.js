@@ -1,3 +1,5 @@
+import {show_view} from "./index.js";
+
 function init_line_format() {
   info_card_lines[0].style.fontWeight = "bold";
   info_card_lines[0].style.fontSize = "25px";
@@ -158,8 +160,12 @@ await fetch("../components/info-card.html")
   });
 
 const info_card = document.getElementById("infoCard");
-const info_card_lines = info_card.children;
+const info_card_lines = info_card.getElementsByClassName("line");
 
 clear_info_card();
 init_line_format();
 set_info_card_state("personal_information");
+
+document.getElementById("back-to-timeline-button").addEventListener("click", function () {
+  show_view("timeline");
+});
