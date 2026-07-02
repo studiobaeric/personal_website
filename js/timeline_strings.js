@@ -44,6 +44,8 @@ function drawPath(from, to) {
 
 function renderConnections() {
 
+  console.log("Rendering Strings...")
+
   const items = document.querySelectorAll(".item");
 
   if (items.length === 0) {
@@ -79,9 +81,7 @@ function renderConnections() {
 
 // redraw on load + resize
 window.addEventListener("load", () => {
-  requestAnimationFrame(() => {
-    requestAnimationFrame(renderConnections);
-  });
+  setTimeout(renderConnections, 30);
 });
 window.addEventListener("resize", renderConnections);
 window.addEventListener("scroll", renderConnections);
