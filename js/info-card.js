@@ -163,7 +163,10 @@ const info_card = document.getElementById("infoCard");
 const info_card_lines = info_card.getElementsByClassName("line");
 const back_button = document.getElementById("back-to-timeline-button");
 
-if (!window.location.pathname.includes("index.html")) {
+const isHome = location.pathname.endsWith("/") ||
+  location.pathname.endsWith("index.html");
+
+if (!isHome) {
   info_card.classList.add("fixed");
   back_button.classList.remove("hidden");
 } else {
