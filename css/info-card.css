@@ -30,10 +30,19 @@
   cursor: default;
 }
 
+.info_card.fixed {
+  transform: translate(0, 0) scale(var(--scale));
+  margin: 8px 8px;
+}
+
 .info_card:hover {
   --scale: 1.05;
   transform-origin: center;
   transition: transform 0.3s;
+}
+
+.info_card.no-hover:hover {
+  --scale: 1;
 }
 
 .info_card::before {

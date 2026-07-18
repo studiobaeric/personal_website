@@ -68,7 +68,7 @@ function renderConnections() {
 
     path.setAttribute("d", drawPath(from, to));
     path.setAttribute("stroke", "#990000");
-    path.setAttribute("stroke-width", "2");
+    path.setAttribute("stroke-width", "3");
     path.setAttribute("fill", "none");
     path.setAttribute("opacity", "0.7");
 
@@ -81,7 +81,7 @@ function renderConnections() {
 
 // redraw on load + resize
 window.addEventListener("load", () => {
-  setTimeout(renderConnections, 30);
+  setTimeout(renderConnections, 80);
 });
 window.addEventListener("resize", renderConnections);
-window.addEventListener("scroll", renderConnections);
+//window.addEventListener("scroll", renderConnections);

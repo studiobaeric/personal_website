@@ -55,7 +55,7 @@ document.getElementById("label_website").addEventListener("click", () => {
   set_info_card_state("website_summary");
 
   const img = document.createElement("img");
-  img.src = "./assets/website.jpg";
+  img.src = "./img/website.webp";
   img.alt = "Website Prototype";
   img.style.width = "250px";
   img.style.height = "auto";

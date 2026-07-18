@@ -1,0 +1,87 @@
+#WEBSITE-DESIGN-VIEW {
+  top: 8px;
+  left: 216px;
+  position: relative;
+  overflow: visible;
+  min-width: 1000px;
+  height: 1000px;
+}
+
+.wd-block {
+  position: absolute;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 10px 15px;
+  transition: transform .2s;
+
+  background: #fffefc;
+}
+
+.wd-block:hover {
+  transform: scale(1.05);
+  transform-origin: center;
+  transition: transform .2s;
+}
+
+.wd-pic {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+.wd-text {
+  position: absolute;
+  font-family: "Patrick Hand", cursive;
+  font-size: 18pt;
+}
+
+
+
+#wd-block1 {
+  top: 75px;
+  left: 20px;
+  width: 310px;
+  height: 470px;
+}
+
+#wd-pic1 {
+  width: 270px;
+  height: auto;
+}
+
+#wd-block2 {
+  top: 150px;
+  right: 20px;
+  width: 400px;
+  height: 380px;
+}
+
+#wd-pic2 {
+  width: auto;
+  height: 270px;
+  position: absolute;
+}
+
+#wd-block3 {
+  top: 750px;
+  right: 250px;
+  width: 400px;
+  height: 380px;
+}
+
+#wd-pic3 {
+  width: auto;
+  height: 270px;
+  position: absolute;
+}
+
+#wd-connections {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}

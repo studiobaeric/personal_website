@@ -6,14 +6,26 @@ canvas.height = window.innerHeight;
 
 let lastPoints = [];
 
-window.addEventListener("mousemove", (e) => {
-  const point = {
-    x: e.clientX,
-    y: e.clientY,
-    time: Date.now()
-  };
+let mouseX = 0;
+let mouseY = 0;
 
-  lastPoints.push(point);
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  lastPoints.push({
+    x: e.pageX,
+    y: e.pageY,
+    time: Date.now()
+  });
+});
+
+window.addEventListener("scroll", () => {
+  lastPoints.push({
+    x: mouseX + window.scrollX,
+    y: mouseY + window.scrollY,
+    time: Date.now()
+  });
 });
 
 // draw loop
@@ -48,10 +60,8 @@ function draw() {
 }
 
 function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  lastPoints = []; // important: reset old coordinates
+  canvas.width = document.documentElement.scrollWidth;
+  canvas.height = document.documentElement.scrollHeight;
 }
 
 window.addEventListener("resize", resizeCanvas);

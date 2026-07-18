@@ -161,11 +161,21 @@ await fetch("../components/info-card.html")
 
 const info_card = document.getElementById("infoCard");
 const info_card_lines = info_card.getElementsByClassName("line");
+const back_button = document.getElementById("back-to-timeline-button");
+
+if (!window.location.pathname.includes("index.html")) {
+  info_card.classList.add("fixed");
+  back_button.classList.remove("hidden");
+} else {
+  info_card.classList.remove("fixed");
+  back_button.classList.add("hidden");
+}
 
 clear_info_card();
 init_line_format();
 set_info_card_state("personal_information");
 
 document.getElementById("back-to-timeline-button").addEventListener("click", function () {
-  show_view("timeline");
+  info_card.classList.remove("fixed");
+  back_button.classList.add("hidden");
 });
