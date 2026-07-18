@@ -80,3 +80,7 @@ document.addEventListener("click", (event) => {
     }, 300);
   }
 });
+
+document.getElementById("impressum-button")?.addEventListener("click", () => {
+  window.location.href = "./impressum.html";
+});

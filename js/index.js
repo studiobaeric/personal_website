@@ -43,3 +43,6 @@ export function show_view(view) {
 }
 
 
+document.getElementById("impressum-button")?.addEventListener("click", () => {
+  window.location.href = "./pages/impressum.html";
+});
