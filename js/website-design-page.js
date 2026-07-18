@@ -55,7 +55,7 @@ function drawConnectionLine() {
     path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('fill', 'none');
     path.setAttribute('stroke', 'rgba(0, 0, 0, 0.2)');
-    path.setAttribute('stroke-width', '100');
+    path.setAttribute('stroke-width', '90');
     svg.appendChild(path);
   }
 
@@ -77,6 +77,6 @@ document.addEventListener("click", (event) => {
 
     setTimeout(() => {
       window.location.replace("../index.html");
-    }, 500);
+    }, 300);
   }
 });

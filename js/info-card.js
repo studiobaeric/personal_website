@@ -1,5 +1,3 @@
-import {show_view} from "./index.js";
-
 function init_line_format() {
   info_card_lines[0].style.fontWeight = "bold";
   info_card_lines[0].style.fontSize = "25px";
@@ -59,8 +57,10 @@ function load_personal_information() {
   reset_info_card();
 
   info_card_lines[0].textContent = "Eric Sodemann";
-  info_card_lines[1].textContent = "+49 163/*******";
-  info_card_lines[2].textContent = "eri*****03@gmail.com";
+  info_card_lines[1].innerHTML =
+    '<img src="../img/maps-pin-line-icon.svg" width="22" height="22" alt="Location">' + "&nbsp 64283 Darmstadt";
+  info_card_lines[2].innerHTML = '<img src="../img/envelope-line-icon.svg" width="22" height="22" alt="Mail">' + "&nbsp ericsode03@gmail.com";
+
 }
 
 function load_abitur_summary() {

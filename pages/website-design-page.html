@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="../css/website-design-page.css">
 <link rel="stylesheet" href="../css/info-card.css">
 <link rel="stylesheet" href="../css/shared.css">
+<link rel="stylesheet" href="../css/zoomable-image.css">
 <head>
   <meta charset="UTF-8">
   <title>Eric Sodemann</title>
@@ -18,25 +19,58 @@
 
 <!-- WEBSITE-DESIGN VIEW -->
 <div id="WEBSITE-DESIGN-VIEW">
+
   <div id="wd-block1" class="wd-block">
     <span class="wd-text" id="wd-text1">Der erste Entwurf der Landing-Page auf einem kleinen Zettel: </span>
-    <img src="../img/website-design/IMG20260624115851.webp" id="wd-pic1" alt="First Scetch" class="wd-pic">
+    <img src="../img/website-design/IMG20260624115851.webp" id="wd-pic1" alt="Picture of the first scetch" class="wd-pic  zoomable-image">
   </div>
+
   <div id="wd-block2" class="wd-block">
-    <span class="wd-text" id="wd-text2">Um ein A4 Blatt auf 9:16 zu bringen, <br> müssen längs 43mm abgeschnitten werden:</span>
-    <img src="../img/website-design/IMG20260624120935.webp" id="wd-pic2" alt="Wrong Side Marked" class="wd-pic">
+    <span class="wd-text" id="wd-text2">Um ein A4 Blatt auf 9:16 zu bringen, müssen 43mm abgeschnitten werden:</span>
+    <img src="../img/website-design/IMG20260624120935.webp" id="wd-pic2" alt="Picture where one side is marked for cut-off" class="wd-pic zoomable-image">
   </div>
+
   <div id="wd-block3" class="wd-block">
-    <span class="wd-text" id="wd-text3">Um ein A4 Blatt auf 9:16 zu bringen, <br> müssen längs 43mm abgeschnitten werden:</span>
-    <img src="../img/website-design/IMG20260624120935.webp" id="wd-pic3" alt="Wrong Side Marked" class="wd-pic">
+    <span class="wd-text" id="wd-text3">Dieses Blatt dient als Vorlage für den Rahmen des Prototyps:</span>
+    <img src="../img/website-design/IMG20260624121323.webp" id="wd-pic3" alt="Picture of paper" class="wd-pic zoomable-image">
   </div>
+
+  <div id="wd-block4" class="wd-block">
+    <span class="wd-text" id="wd-text4">Der Rahmen und die Rückplatte fertig ausgeschnitten:</span>
+    <img src="../img/website-design/IMG20260624123435.webp" id="wd-pic4" alt="Picture of the cut out frame" class="wd-pic zoomable-image">
+  </div>
+
+  <div id="wd-block5" class="wd-block">
+    <span class="wd-text" id="wd-text5">Fest verkleben und testen, ob das Blatt hineinpasst:</span>
+    <img src="../img/website-design/IMG20260624122817.webp" id="wd-pic5" alt="Picture of frame with paper inside" class="wd-pic zoomable-image">
+  </div>
+
+  <div id="wd-block6" class="wd-block">
+    <span class="wd-text" id="wd-text6">Während der Kleber trocknet, wird das erste Layout vorbereitet:</span>
+    <img src="../img/website-design/IMG20260624130253.webp" id="wd-pic6" alt="Picture of first design" class="wd-pic zoomable-image">
+  </div>
+
+  <div id="wd-block7" class="wd-block">
+    <span class="wd-text" id="wd-text7">Der Fertige Prototyp:</span>
+    <img src="../img/website-design/IMG20260624135540.webp" id="wd-pic7" alt="Picture of finished Prototype" class="wd-pic zoomable-image">
+  </div>
+
   <svg id="wd-connections"></svg>
 </div>
 
+<div id="image-modal" class="image-modal">
+  <span id="close-modal" class="close-modal">&times;</span>
+  <img id="modal-image" class="modal-image">
+</div>
+
+<button id="impressum-button" class="impressum-button">
+  Impressum
+</button>
 
 <script src="../js/trail.js"></script>
 <script src="../js/info-card.js" type="module"></script>
 <script src="../js/website-design-page.js" type="module"></script>
+<script src="../js/zoomable_image.js" type="module"></script>
 
 </body>
 </html>

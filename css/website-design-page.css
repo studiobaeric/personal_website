@@ -1,11 +1,12 @@
 #WEBSITE-DESIGN-VIEW {
   top: 8px;
-  left: 216px;
+  left: 420px;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   min-width: 1000px;
-  height: 1000px;
+  min-height: 2150px;
 }
+
 
 .wd-block {
   position: absolute;
@@ -35,46 +36,97 @@
 .wd-text {
   position: absolute;
   font-family: "Patrick Hand", cursive;
-  font-size: 18pt;
+  font-size: 16pt;
 }
 
 
 
 #wd-block1 {
-  top: 75px;
+  top: 25px;
   left: 20px;
-  width: 310px;
-  height: 470px;
+  width: 265px;
+  height: 400px;
 }
-
 #wd-pic1 {
-  width: 270px;
+  width: 225px;
   height: auto;
 }
 
-#wd-block2 {
-  top: 150px;
-  right: 20px;
-  width: 400px;
-  height: 380px;
-}
 
+#wd-block2 {
+  top: 110px;
+  right: 200px;
+  width: 340px;
+  height: 325px;
+}
 #wd-pic2 {
   width: auto;
-  height: 270px;
+  height: 225px;
   position: absolute;
 }
 
-#wd-block3 {
-  top: 750px;
-  right: 250px;
-  width: 400px;
-  height: 380px;
-}
 
+#wd-block3 {
+  top: 530px;
+  right: 50px;
+  width: 340px;
+  height: 325px;
+}
 #wd-pic3 {
   width: auto;
-  height: 270px;
+  height: 225px;
+  position: absolute;
+}
+
+
+#wd-block4 {
+  top: 680px;
+  right: 530px;
+  width: 340px;
+  height: 325px;
+}
+#wd-pic4 {
+  width: auto;
+  height: 225px;
+  position: absolute;
+}
+
+
+#wd-block5 {
+  top: 1120px;
+  right: 600px;
+  width: 340px;
+  height: 325px;
+}
+#wd-pic5 {
+  width: auto;
+  height: 225px;
+  position: absolute;
+}
+
+
+#wd-block6 {
+  top: 1350px;
+  right: 100px;
+  width: 340px;
+  height: 325px;
+}
+#wd-pic6{
+  width: auto;
+  height: 225px;
+  position: absolute;
+}
+
+
+#wd-block7 {
+  top: 1750px;
+  right: 350px;
+  width: 265px;
+  height: 370px;
+}
+#wd-pic7{
+  width: 225px;
+  height: auto;
   position: absolute;
 }
 

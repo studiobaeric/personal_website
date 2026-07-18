@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+
+
 #trail {
   position: absolute;
   top: 0;
@@ -18,12 +20,80 @@
   pointer-events: none;
 }
 
+html {
+  cursor: url("../img/pencil.png") 0 100, auto;
+}
+
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
   background: antiquewhite;
   cursor: url("../img/pencil.png") 0 100, auto;
-  width: 100%;
   display: flex;
   overflow: auto;
+}
+
+.impressum-button {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+
+  font-family: "Patrick Hand", cursive;
+  font-size: 28px;
+
+  padding: 8px 28px;
+  background: antiquewhite;
+  border: 2px solid #222;
+  border-radius: 4px;
+
+  z-index: 1000;
+  box-shadow: 3px 3px 0 #222;
+
+  transition: transform 0.15s ease;
+}
+
+.impressum-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#impressum-back-button {
+  --scale: 1;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(var(--scale));
+  top: 250px;
+  display: block;
+  margin: 0 auto;
+
+  font-family: "Patrick Hand", cursive;
+  font-size: 28px;
+
+  padding: 8px 28px;
+  background: antiquewhite;
+  border: 2px solid #222;
+  border-radius: 4px;
+
+  z-index: 1000;
+  box-shadow: 3px 3px 0 #222;
+
+  transition: transform 0.15s ease;
+
+  cursor: pointer;
+}
+
+#impressum-back-button:hover {
+  --scale: 1.05;
+}
+
+
+.impressum-text {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 28px;
+  text-align: center;
 }
