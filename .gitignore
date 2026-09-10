@@ -8,4 +8,5 @@ dist
 *.iml
 /test-results/
 /playwright-report/
+/playwright-report-mobile/
 /playwright/.cache/

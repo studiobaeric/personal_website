@@ -9,7 +9,8 @@
   "license": "",
   "author": "",
   "scripts": {
-    "test": "playwright test",
+    "test": "playwright test --project=chromium",
+    "test:mobile": "PLAYWRIGHT_HTML_REPORT=playwright-report-mobile playwright test --project=mobile-chrome",
     "start": "webpack serve --open --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js"
   },

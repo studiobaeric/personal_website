@@ -23,9 +23,25 @@ jobs:
         env:
           CI: true
 
+      # Mobile layout is tracked separately by issue #1 ("Mobile Ansicht
+      # funktioniert nicht richtig") and currently fails several checks, so
+      # this runs for visibility without blocking the build.
+      - run: npm run test:mobile
+        if: always()
+        continue-on-error: true
+        env:
+          CI: true
+
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: playwright-report
           path: playwright-report/
+          retention-days: 14
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report-mobile
+          path: playwright-report-mobile/
           retention-days: 14
