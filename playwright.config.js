@@ -28,7 +28,11 @@ module.exports = defineConfig({
   ],
 
   webServer: {
-    command: 'npm start',
+    // A plain static server, not the webpack dev server: the site ships as
+    // static files (see .github/workflows/deploy.yml, which just rsyncs
+    // them), and the dev server's hot-reload client was causing pages to
+    // reload mid-test, hanging the suite in CI.
+    command: 'npm run test:server',
     url: 'http://localhost:8080',
     reuseExistingServer: !process.env.CI,
   },
