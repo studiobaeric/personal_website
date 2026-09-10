@@ -41,7 +41,7 @@ document.getElementById("label_micromobility").addEventListener("click", () => {
   set_info_card_state("micromobility_summary");
 
   const img = document.createElement("img");
-  img.src = "./assets/micromobility.png";
+  img.src = "./img/micromobility.png";
   img.alt = "Micromobility Map";
   img.style.width = "300px";
   img.style.height = "300px";
