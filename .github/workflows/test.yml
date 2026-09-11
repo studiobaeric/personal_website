@@ -40,12 +40,8 @@ jobs:
         env:
           CI: true
 
-      # Mobile layout is tracked separately by issue #1 ("Mobile Ansicht
-      # funktioniert nicht richtig") and currently fails several checks, so
-      # this runs for visibility without blocking the build.
       - run: npm run test:mobile
         if: always()
-        continue-on-error: true
         env:
           CI: true
 

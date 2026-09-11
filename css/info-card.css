@@ -125,3 +125,38 @@
 .hidden.back-to-timeline-button {
   transition: opacity 0.4s ease;
 }
+
+@media (max-width: 700px) {
+  .info_card {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+
+    width: calc(100% - 24px);
+    min-width: 0;
+    height: auto;
+
+    margin: 16px auto;
+  }
+
+  .info_card:hover {
+    transform: none;
+  }
+
+  .info_card.fixed {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+
+    width: calc(100% - 24px);
+    height: auto;
+    margin: 16px auto;
+    transform: none;
+  }
+
+  .info_card.fixed:hover {
+    transform: none;
+  }
+}

@@ -18,9 +18,8 @@ module.exports = defineConfig({
       name: 'chromium',
       use: {...devices['Desktop Chrome']},
     },
-    // The current layout isn't mobile-friendly yet (see issue #1), so this
-    // project is run separately via `npm run test:mobile` rather than as
-    // part of the default `npm test` / CI gate.
+    // Run separately via `npm run test:mobile` (see .github/workflows/test.yml)
+    // so mobile and desktop results are reported independently.
     {
       name: 'mobile-chrome',
       use: {...devices['Pixel 5']},

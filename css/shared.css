@@ -97,3 +97,16 @@ body {
   font-size: 28px;
   text-align: center;
 }
+
+@media (max-width: 700px) {
+  body {
+    flex-direction: column;
+  }
+
+  .impressum-button {
+    position: static;
+    align-self: center;
+    width: fit-content;
+    margin: 24px auto;
+  }
+}
