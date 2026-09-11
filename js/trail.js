@@ -62,12 +62,6 @@ function draw() {
 function resizeCanvas() {
   canvas.width = document.documentElement.scrollWidth -15;
   canvas.height = document.documentElement.scrollHeight;
-
-  console.log(
-    document.documentElement.clientWidth,
-    document.documentElement.scrollWidth,
-    canvas.width
-  );
 }
 
 window.addEventListener("resize", resizeCanvas);

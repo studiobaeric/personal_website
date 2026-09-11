@@ -43,13 +43,9 @@ function drawPath(from, to) {
 }
 
 function renderConnections() {
-
-  console.log("Rendering Strings...")
-
   const items = document.querySelectorAll(".item");
 
   if (items.length === 0) {
-    console.error("Red Strings tried to render before items exist.");
     return;
   }
 
