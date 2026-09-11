@@ -69,8 +69,6 @@ window.addEventListener('resize', drawConnectionLine);
 
 document.addEventListener("click", (event) => {
   if (event.target.id === "back-to-timeline-button") {
-    console.log("back-to-timeline-button clicked");
-
     document
       .getElementById("WEBSITE-DESIGN-VIEW")
       .classList.add("hidden");
