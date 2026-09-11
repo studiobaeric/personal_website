@@ -6,3 +6,7 @@ dist
 .cache
 /.idea/
 *.iml
+/test-results/
+/playwright-report/
+/playwright-report-mobile/
+/playwright/.cache/
